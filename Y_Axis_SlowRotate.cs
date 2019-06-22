@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Y_Axis_SlowRotate : MonoBehaviour {
 
+    public float speed = 4.2f;
+
     [SerializeField]
     private bool isclockwise = false;
-    [SerializeField]
-    private float speedFactor = 4.2f;
 
     // Start is called before the first frame update
     void Start() {
@@ -17,10 +17,10 @@ public class Y_Axis_SlowRotate : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (isclockwise) { 
-            transform.Rotate(0, -1 * Time.deltaTime * speedFactor, 0);
+            transform.Rotate(0, -1 * Time.deltaTime * speed, 0);
         }
         else if (!isclockwise) {
-            transform.Rotate(0, Time.deltaTime * speedFactor, 0);
+            transform.Rotate(0, Time.deltaTime * speed, 0);
         }
     }
 }
